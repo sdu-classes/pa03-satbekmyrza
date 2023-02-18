@@ -2,9 +2,20 @@ public class Calculator {
     private int a;
     private int b;
 
-    public Calculator(int a, int b) {
-        this.a = a;
-        this.b = b;
+    // public Calculator(int a, int b) {
+    //     this.a = a;
+    //     this.b = b;
+    // }
+
+    public Calculator(Object a, Object b) {
+        if (!(a instanceof Integer)) {
+            throw new NumberFormatException("non-integer value provided: " + a.toString());
+        }
+        if (!(b instanceof Integer)) {
+            throw new NumberFormatException("non-integer value provided: " + b.toString());
+        }
+        this.a = (Integer) a;
+        this.b = (Integer) b;
     }
 
     public void add() {
