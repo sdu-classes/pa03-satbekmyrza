@@ -20,7 +20,7 @@ public class ReadFile {
 
     public static void main(String[] args) {
         try {
-            String[] contents = readFile("input.txt");
+            String[] contents = readFile("files" + File.separator + "input.txt");
             for (String line: contents) {
                 if (line == null) {
                     break;
