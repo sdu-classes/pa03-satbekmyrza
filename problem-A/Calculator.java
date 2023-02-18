@@ -6,6 +6,17 @@ public class Calculator {
         this.a = a;
         this.b = b;
     }
+    
+    public Calculator(Object a, Object b) {
+        /*
+         * Razminka: 
+         * 2 3 +
+         * 2 3.4 +
+         * 2.3f 3.4 +
+         * "3.14" "4" +
+         */
+        throw new NumberFormatException("Non-integer value entered.");
+    }
 
     public int add() {
         if (a < 0 || b < 0) {

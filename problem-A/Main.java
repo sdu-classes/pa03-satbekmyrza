@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        
+        // integer values
         try {
             System.out.println("Please enter two numbers: ");
             int a = in.nextInt();
@@ -24,6 +26,15 @@ public class Main {
         } catch (ArithmeticException exc) {
             System.out.println(exc.getMessage());
         }
+
+        // non-integer values
+        try {
+            Calculator c2 = new Calculator(2, 4);
+            System.out.println(c2.add());
+        } catch (NumberFormatException exc) {
+            System.out.println(exc.getMessage());
+        }
+
 
     }
 }
